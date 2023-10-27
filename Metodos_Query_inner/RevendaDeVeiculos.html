@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2</title>
+</head>
+<body>
+    <h1> revenda de veiculos </h1>
+    <form id="RevendaVeiculos"> 
+        <p> Carro </p>
+    <input type="string" id="Carro" required>
+    <p> Preço </p>
+    <input type="number" id="Preco"> 
+    <input id="Enviar"  type="submit" value="Enviar">
+    </form>
+
+<h1 id="Nome"> </h1>
+<h2 id="PrecoEntradah2"> </h2>
+<h2 id="Parcelah2"> </h2>
+
+
+    <script>
+        function Revenda(e){
+            e.preventDefault()
+            const Entrada = document.querySelector('#Preco').value * 0.50
+            const Parcela = document.querySelector('#Preco').value * 0.50/12
+            const NomeCarro = document.querySelector('#Carro').value
+            const Nome = document.querySelector('#Nome')
+
+            Nome.innerText = ` ${NomeCarro} `
+            const Parcelah2 = document.querySelector('#Parcelah2')
+            Parcelah2.innerText = `12x de ${Parcela}`
+
+            const Precoentrada = document.querySelector('#PrecoEntradah2')
+            Precoentrada.innerText = `entrada é de ${Entrada}`
+         }
+        
+        document.getElementById('RevendaVeiculos').addEventListener("submit", Revenda)
+        
+        </script>
+
+
+</body>
+</html>

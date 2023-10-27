@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanhouse</title>
+</head>
+<body>
+    <h1> LanHouse </h1>
+    <form id="Form"> 
+        <p> valor por 15min R$</p>
+        <input id="Preco" type="number"> 
+
+        <p> Tempo usado </p>
+        <input id="Tempo" type="number"> 
+
+        <input id="Btn" type="submit">
+
+    </form>
+
+    <h2 id="ValorH2"> </h2>
+
+    <script> 
+
+        function ValorLanHouse(e){
+            e.preventDefault()
+
+            const TempoUso = document.querySelector('#Tempo').value 
+            const PrecoPmin = document.querySelector('#Preco').value
+            const TotalPreco = Math.ceil(TempoUso / 15)
+
+            const ValorFinal = (TotalPreco * PrecoPmin).toFixed(2)
+
+            const MostrarResultado = document.querySelector('#ValorH2')
+            MostrarResultado.innerText = `Tem que pagar total de: ${ValorFinal} `
+        }
+
+        document.getElementById('Form').addEventListener('submit', ValorLanHouse)
+
+
+    </script>
+
+</body>
+</html>
+
+<!-- acada 15min um valor,  -->
