@@ -1,0 +1,28 @@
+@font-face {
+    font-family: Sfpro;
+    src: url(/font/SF-Pro-Display-Medium.otf);
+}
+
+body{
+    background-color: #353535;
+    margin: 0;
+    padding: 10%;
+    font-family: Sfpro;
+    
+}
+
+
+h1, h2, h3, h4, h5, h6, p{
+    color: aliceblue;
+ 
+
+}
+
+#Botao{
+    color: #ffffff;
+    background-color: rgb(97, 97, 97);
+    border: none;
+    border-radius: 3px;
+    padding: 4px;
+    cursor: pointer;
+}
