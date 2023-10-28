@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou Impar</title>
+    <link rel="stylesheet" href="/Style/style.css">
+</head>
+<body>
+    <h1> Par ou Impar</h1>
+    <form id="Form">
+        <p> Insira número:</p>
+        <input id="Numero" type="Number">
+        <input id="Botao" type="submit">
+    </form>
+
+    <h2 id="MostrarParh2"> </h2>
+
+    <script>
+        function ParImpar(e){
+            e.preventDefault();
+            const Numero = document.querySelector('#Numero').value 
+            
+            if(Numero % 2 == 0){
+            const MostrarPar = document.querySelector('#MostrarParh2')
+            MostrarPar.innerText = `${Numero} é par para caralho`
+            }
+            else{
+                const MostrarImpar = document.querySelector('#MostrarParh2')
+                MostrarImpar.innerText = `${Numero} é impar `
+            }
+
+        }
+        document.getElementById('Form').addEventListener('submit', ParImpar)
+    </script>
+</body>
+</html>

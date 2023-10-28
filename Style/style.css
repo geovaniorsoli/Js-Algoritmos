@@ -1,14 +1,14 @@
-@font-face {
+ @font-face {
     font-family: Sfpro;
     src: url(/font/SF-Pro-Display-Medium.otf);
-}
+ }
+
 
 body{
-    background-color: #353535;
+    background-color: #1e1d1d;
     margin: 0;
     padding: 10%;
-    font-family: Sfpro;
-    
+    font-family: Sfpro;    
 }
 
 
@@ -25,4 +25,33 @@ h1, h2, h3, h4, h5, h6, p{
     border-radius: 3px;
     padding: 4px;
     cursor: pointer;
+}
+
+.inputclass{
+width: 200px;
+padding: 4px;
+margin-bottom: 10px;
+border-radius: 3px;
+border: none;
+}
+#Form input[type="text"],
+#Form input[type="number"],
+#Form input[type="radio"],
+#Form input[type="checkbox"]
+#Form input[type="float"] {
+    width: 200px;
+    padding: 4px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: none;
+
+}
+
+#Form input[type="radio"],
+#Form input[type="checkbox"] {
+    width: auto;
+}
+
+.radio-group, .checkbox-group {
+    margin: 10px 0;
 }

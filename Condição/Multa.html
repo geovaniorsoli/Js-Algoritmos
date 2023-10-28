@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multa</title>
+    <link rel="stylesheet" href="/Style/style.css">
+</head>
+<body>
+    <h1> Multa de velocidade </h1>
+
+    <form id="Form">
+        <p> Velocidade Permitida</p>
+        <input id="VelocidadePermitida" class="inputclass" type="float">
+        <p> Velocidade Conduzida</p>
+        <input id="VelocidadeConduzida" class="inputclass" type="float">
+        <input id="Botao" type="submit" value="dados">
+    </form>
+
+    <h2 id="Multah2"> </h2>
+    <script> 
+        function Velocidade(e){
+            e.preventDefault();
+            const VelocidadePermitida = document.querySelector('#VelocidadePermitida').value 
+            const VelocidadeConduzida = document.querySelector('#VelocidadeConduzida').value
+            const VelocidadeAcima = VelocidadeConduzida - VelocidadePermitida
+            const Limite = VelocidadeAcima * 0.2
+            const Mostrarh2 = document.querySelector('#Multah2')
+
+            if(VelocidadePermitida <= VelocidadeConduzida){
+                Mostrarh2.innerText = `Não tomou multa`
+            }
+            else{
+                (VelocidadeConduzida < VelocidadePermitida)
+                Mostrarh2.innerText = `Tomou Multa`
+            }
+        }
+
+        document.getElementById('Form').addEventListener('submit', Velocidade)
+    
+
+
+    </script>
+</body>
+</html>
