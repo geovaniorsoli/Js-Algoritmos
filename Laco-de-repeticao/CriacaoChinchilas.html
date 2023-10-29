@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de Chinchilas</title>
+    <link rel="stylesheet" href="/Style/style.css">
+</head>
+<body>
+    <h1> Criação de Chinchilas </h1>
+    <h4> Acada ano o numero escolhido sera expondenciado </h4>
+
+    <form id="Form">
+        
+        <p> Numero de Chinchilas </p>
+        <input id="Quantidade" type="Number">
+        <p> Numero de anos </p>
+        <input id="Anos" type="number"> </br> 
+        <input id="Botao" type="submit" value="Mostrar quantidade de chinchilas">
+
+    </form>
+
+    <h2 id="Respostah2"> </h2>
+
+
+    <script> 
+        function QuantidadeChinchilas(e){
+            e.preventDefault()
+
+            const QuantidadeInicial = document.querySelector("#Quantidade").value 
+            const Anos = document.querySelector("#Anos").value 
+            const Resposta = document.querySelector("#Respostah2")
+
+            if(QuantidadeInicial < 2 || Anos == 0 || isNaN(QuantidadeInicial) || isNaN(Anos)){
+                alert('Dados incorretos presta atencao')
+                return
+            }
+
+            let Resultado = ''
+            let QuantidadeAtual = QuantidadeInicial
+
+            for(let i = 1; i <= Anos; i++){
+                Resultado += `Ano ${i}: ${QuantidadeAtual}: Chinchilas\n` 
+                QuantidadeAtual *= 3
+            }
+
+            Resposta.innerText = Resultado
+        
+        }
+
+        document.getElementById('Form').addEventListener('submit', QuantidadeChinchilas)
+
+    </script>
+</body>
+</html>

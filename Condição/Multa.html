@@ -11,9 +11,9 @@
 
     <form id="Form">
         <p> Velocidade Permitida</p>
-        <input id="VelocidadePermitida" class="inputclass" type="float">
+        <input id="VelocidadePermitida" class="inputclass" type="number">
         <p> Velocidade Conduzida</p>
-        <input id="VelocidadeConduzida" class="inputclass" type="float">
+        <input id="VelocidadeConduzida" class="inputclass" type="number">
         <input id="Botao" type="submit" value="dados">
     </form>
 
@@ -24,15 +24,14 @@
             const VelocidadePermitida = document.querySelector('#VelocidadePermitida').value 
             const VelocidadeConduzida = document.querySelector('#VelocidadeConduzida').value
             const VelocidadeAcima = VelocidadeConduzida - VelocidadePermitida
-            const Limite = VelocidadeAcima * 0.2
+            const Limite = (VelocidadeAcima * 0.5) + VelocidadePermitida
             const Mostrarh2 = document.querySelector('#Multah2')
 
-            if(VelocidadePermitida <= VelocidadeConduzida){
-                Mostrarh2.innerText = `Não tomou multa`
+            if(Limite <= VelocidadePermitida){
+                Mostrarh2.innerText = `não Tomou multa `
             }
             else{
-                (VelocidadeConduzida < VelocidadePermitida)
-                Mostrarh2.innerText = `Tomou Multa`
+                Mostrarh2.innerText = ` tomou Multa`
             }
         }
 
