@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <link rel="stylesheet" href="/Style/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class=".form-section"> 
+    <h1> Conversor de texto: </h1>
+    <form id="Form">
+        <p> Insira seu texto: </p>
+        <textarea class="inputclass txtarea" id="Texto">  </textarea>
+    <p> Escolha: </p>
+        <input id="btmai" value="Maiusculo" class="btnclass2" type="button" onclick="Conversor('upper')">
+        <input id="btmin" value="Minusculo" class="btnclass2" type="button" onclick="Conversor('lower')">
+        
+    </form>
+</div>
+<div class="response-section mt-3"> 
+    <h1> Convertido: </h1>
+    <textarea class="inputclass txtarea" id="show"> </textarea>
+</div>
+</div>
+<script>
+    function Conversor(mode){
+        const maintxt = document.querySelector('#Texto').value 
+        let resultado = ''
+
+        if(mode == 'upper'){
+            resultado = maintxt.toUpperCase()
+        } else if (mode == 'lower'){
+            resultado = maintxt.toLowerCase()
+
+        }
+        document.querySelector('#show').value = resultado;
+
+    }
+</script>
+
+
+
+    
+</body>
+</html>
+
