@@ -27,12 +27,53 @@ h1, h2, h3, h4, h5, h6, p{
     cursor: pointer;
 }
 
+.btnclass1{
+    color: #ffffff;
+    background-color: rgb(97, 97, 97);
+    border: none;
+    border-radius: 3px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.btnclass2{
+    color: #ffffff;
+    background-color: rgb(51, 78, 212);
+    border: none;
+    border-radius: 3px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+
+.btnclass3{
+    color: #ffffff;
+    background-color: rgb(60, 173, 43);
+    border: none;
+    border-radius: 3px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+
+.btnclass4{
+    color: #ffffff;
+    background-color: rgb(173, 43, 43);
+    border: none;
+    border-radius: 3px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+
+
 .inputclass{
 width: 200px;
 padding: 4px;
 margin-bottom: 10px;
 border-radius: 3px;
 border: none;
+
 }
 #Form input[type="text"],
 #Form input[type="number"],
@@ -54,4 +95,40 @@ border: none;
 
 .radio-group, .checkbox-group {
     margin: 10px 0;
+}
+
+.p{
+    padding: 10px;
+}
+.mt-2{
+    margin-top: 10px;
+}
+
+.mt-3{
+    margin-top: 30px;
+}
+
+.m{
+    margin: 5px;
+}
+
+.ml{
+    margin-left: 4px;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-section {
+    width: 48%;
+}
+
+.response-section {
+    width: 48%;
 }
