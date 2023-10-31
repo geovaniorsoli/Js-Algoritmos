@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos Vetor</title>
+    <link rel="stylesheet" href="/Style/style.css">
+</head>
+
+<body>
+
+    <h1 class="center mb-3"> Vetores - tipo de inserção </h1>
+    <div class="container">
+        <div class="form-section">
+
+            <h1> Inserir dados </h1>
+
+            <form id="FormPUSH">
+                <p> Push </p>
+                <input id="NumeroPUSH" class="inputclass" type="number">
+                <button class="btnclass2" type="submit">Push</button>
+            </form>
+
+            <form id="FormUNSHIFT">
+                <p> Unshift </p>
+                <input id="NumeroUNSHIFT" class="inputclass" type="number">
+                <button  class="btnclass2 type="submit">Unshift</button>
+            </form>
+
+            <form id="FormPOP">
+                <p> Pop </p>
+                <button class="btnclass3" type="submit">Pop</button>
+            </form>
+
+            <form id="FormSHIFT">
+                <p> Shift </p>
+                <button class="btnclass3" type="submit">Shift</button>
+            </form>
+
+
+        </div>
+
+        <div class="response-section">
+            <h1 class="al-start"> Definição: </h1>
+            <h2> push ( )</h2>
+            <p> Add um elemento a final</p>
+
+            <h2> unshift ( )</h2>
+            <p> Add um elemento no inicio e desloca os demais para baixo</p>
+
+            <h2> pop( )</h2>
+            <p> Remove o ultimo elemento </p>
+
+            <h2> unshift( )</h2>
+            <p> Remove o primerio elemento </p>
+        </div>
+    </div>
+    <h1> Dados inseridos: </h1>
+    <p id="MostrarDados"> </p>
+    <script>
+
+        let dados = [];
+
+        document.getElementById('FormPUSH').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const numero = parseInt(document.getElementById('NumeroPUSH').value, 10);
+            if (!isNaN(numero)) {
+                dados.push(numero);
+                mostrarDados();
+            } else {
+                alert('Digite um número válido para PUSH.');
+            }
+        });
+
+        document.getElementById('FormUNSHIFT').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const numero = parseInt(document.getElementById('NumeroUNSHIFT').value, 10);
+            if (!isNaN(numero)) {
+                dados.unshift(numero);
+                mostrarDados();
+            } else {
+                alert('Digite um número válido para UNSHIFT.');
+            }
+        });
+
+        document.getElementById('FormPOP').addEventListener('submit', function (e) {
+            e.preventDefault();
+            dados.pop();
+            mostrarDados();
+        });
+
+        document.getElementById('FormSHIFT').addEventListener('submit', function (e) {
+            e.preventDefault();
+            dados.shift();
+            mostrarDados();
+        });
+
+        function mostrarDados() {
+            document.getElementById('MostrarDados').innerText = `Dados: [${dados.join(', ')}]`;
+        }
+
+    </script>
+</body>
+
+</html>
