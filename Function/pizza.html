@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pizza</title>
+    <link rel="stylesheet" href="/Style/style.css">
+</head>
+<body>
+    <h1> Anotar pedido  </h1>
+    <div class="container"> 
+        <div class="form-section"> 
+    <form id="Form">
+        <h2> Escolha </h2>
+        <label for="pizza"> pizza </label>
+        <input name="tipo" type="radio" id="pizza" value="pizza" checked autofocus>
+
+        <label for="bebida"> bebida </label>
+        <input name="tipo" type="radio" id="bebida" value="bebida">
+
+        <p> Itens</p>
+
+        <select id="bebidaProd" class="inputclass oculta">
+        <option value=""> Bebida </option>
+        <option value="agua"> agua </option>    
+        <option value="suco"> suco de maracuja </option>
+        </select>
+
+
+        <select id="pizzaProd" class="inputclass">
+            <option value=""> pizza </option>
+            <option value="agua"> calabresa </option>    
+            <option value="suco"> peperoni </option>
+        </select>
+
+        <p> Descrição</p>
+        <input id="descricao" class="inputclass" type="text">
+        <input id="enviar" class="btnclass2" type="submit">
+        
+    </form>
+</div>
+
+
+    <div class="response-section">
+    <h1>Pedidos:</h1>
+    
+        <h2 id="itemh2"> Item:  </h2>
+        <h4 id="descricaoh4"> Descrição - </h4>
+
+    </div>
+</div>
+    <script src="/Function/script.js"> </script>
+</body>
+</html>
