@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> oi </title>
+    <link rel="stylesheet" href="/Style/style.css">
+</head>
+
+<body>
+    <h1> programa que lembra do seu nome </h1>
+    <form id="Form">
+        <p> digita seu nome: </p>
+        <input id="nome" class="inputclass" type="text">
+        <button id="lembrar" class="btnclass2"> lembrar </button>
+        <button id="esquecer" class="btnclass4"> esquecer </button>
+    </form>
+
+    <h1 id="nomeh1"> </h1>
+
+    <script>
+        
+    function lembrarnome(e){
+        e.preventDefault()
+
+        const nome = document.querySelector("#nome").value
+        const h1 = document.querySelector('#nomeh1')
+
+            if(nome.length == 0){
+                window.alert('preciso de algo para lembra :/ me diga algo')
+                return
+            }
+
+            localStorage.setItem('nome', nome)
+            h1.innerText = `oi bom dia ${nome}`
+
+        }
+        
+        document.getElementById('lembrar').addEventListener('click', lembrarnome)
+
+        function carregarnome(){
+            const nomesalvo = localStorage.getItem('nome')
+            
+            if(nomesalvo){
+                document.querySelector('#nome').value = nomesalvo
+                document.querySelector('#nomeh1').innerText = `oi bom dia ${nomesalvo}`
+            }
+        }
+        window.onload = carregarnome;
+
+        function esquecernome(){
+            const nomesalvo = localStorage.getItem('nome')
+
+            if(!nomesalvo){
+                window.alert('voce nao pode esquecer de nada pq nao se lembra nada')
+                return
+            }
+
+            localStorage.removeItem('nome')
+            document.querySelector('#nome').value = ''
+            document.querySelector('#nomeh1').innerText = ''
+        }
+        document.getElementById('esquecer').addEventListener('click', esquecernome)
+
+    </script>
+</body>
+
+</html>
