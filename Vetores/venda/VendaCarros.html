@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Style/style.css">
+    <title>Venda carros</title>
+</head>
+<body>
+    <h1> Venda Carros </h1>
+
+    <div class="container">
+        <div class="form-section">
+            <h3> Cadastrar carros </h3>
+            <form id="CadCarros">
+                <p> Modelo </p>
+                <input id="NomeCarro" class="inputclass" type="text" required autofocus>
+                <p> Preço </p>
+                <input id="PrecoCarro" class="inputclass" type="number" required> 
+                <input id="Botao" type="submit" value="Cadastrar">
+            </form>
+            <div class="mt-2">
+                <button id="btlistar" type="button" class="btnclass2"> Listar </button>
+                <button id="btfiltrar" type="button" class="btnclass3"> Filtrar</button>
+                <button id="btsimular" type="button" class="btnclass4"> Simular</button>
+            </div>
+        </div>
+
+        <div class="response-section">
+            <h2 id="resposta"> </h2>
+        </div>
+    </div>
+
+
+    <script src="./script.js"> </script>
+
+       
+
+   
+</body>
+</html>
